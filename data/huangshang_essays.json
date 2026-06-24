@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.3",
+  "schema_version": "0.4",
   "last_updated": "2026-06-24",
   "confidence_legend": {
     "确定": "Confirmed; corroborated by an authoritative source or by two+ independent sources.",
@@ -21,7 +21,8 @@
     "proposed_section": "Target section 1-8 (0 = appendix/paratext).",
     "source_reference": "Where the title/metadata was located.",
     "copyright_status_note": "Copyright and usage caution.",
-    "confidence": "确定 / 待核 / 推测 for the record (esp. title+collection+year)."
+    "confidence": "确定 / 待核 / 推测 for the record (esp. title+collection+year).",
+    "inclusion": "必收 / 可选 / 资料库（备而不选，仅存目录不入正文）"
   },
   "author": {
     "pen_name": "黄裳",
@@ -31,14 +32,38 @@
     "ancestral_home": "山东益都",
     "birthplace": "河北井陉",
     "birthplace_confidence": "待核",
-    "roles": ["散文家", "记者", "藏书家", "古籍版本学者", "翻译家"],
+    "roles": [
+      "散文家",
+      "记者",
+      "藏书家",
+      "古籍版本学者",
+      "翻译家"
+    ],
     "biographical_anchors": [
-      {"fact": "天津南开中学就读", "confidence": "待核"},
-      {"fact": "1940年入上海交通大学电机系，1942年转重庆交通大学", "confidence": "待核"},
-      {"fact": "1943年应征入伍；1944–1946年间在成都、重庆、昆明、桂林、贵阳及印度等地任美军译员", "confidence": "确定"},
-      {"fact": "1946年出版第一本散文集《锦帆集》", "confidence": "确定"},
-      {"fact": "长期任职于上海《文汇报》（记者、编辑、编委）", "confidence": "确定"},
-      {"fact": "2012年9月5日在上海逝世，享年93岁", "confidence": "确定"}
+      {
+        "fact": "天津南开中学就读",
+        "confidence": "待核"
+      },
+      {
+        "fact": "1940年入上海交通大学电机系，1942年转重庆交通大学",
+        "confidence": "待核"
+      },
+      {
+        "fact": "1943年应征入伍；1944–1946年间在成都、重庆、昆明、桂林、贵阳及印度等地任美军译员",
+        "confidence": "确定"
+      },
+      {
+        "fact": "1946年出版第一本散文集《锦帆集》",
+        "confidence": "确定"
+      },
+      {
+        "fact": "长期任职于上海《文汇报》（记者、编辑、编委）",
+        "confidence": "确定"
+      },
+      {
+        "fact": "2012年9月5日在上海逝世，享年93岁",
+        "confidence": "确定"
+      }
     ],
     "note": "黄裳游记的底色是'地点触发的文史随笔'：风景、旧迹、掌故、书籍、戏曲、人物与历史感交织。全书结构据此建立。"
   },
@@ -135,10 +160,30 @@
       "note": "分'秦淮拾梦/闲情逸事/驻足闲览/羁旅山川/榆下梦痕/月旦人物'六辑，汇黄裳数十年散文精华。其主题分辑思路与本项目相近，是重点对照对象。注意：与1942年单篇《白门秋柳》同名，勿混。",
       "confidence": "待核"
     },
-    {"title": "黄裳自选集", "type": "作者自选集", "note": "分辑收早期西南/美国兵/书话诸篇（含昆明杂记、茶馆、森林·雨季·山头人、美国兵与女人、琉璃厂、西泠访书记等线索）。", "confidence": "待核"},
-    {"title": "山川、历史、人物", "type": "主题选本", "note": "取向与本项目最接近，须重点对照。", "confidence": "待核"},
-    {"title": "黄裳散文（中国现当代名家散文典藏，人民文学出版社）", "type": "通代散文选", "note": "通行选本，非行旅专题。", "confidence": "待核"},
-    {"title": "黄裳散文选集（百花文艺出版社，2004）", "type": "通代散文选", "note": "百花'散文选集'系列。", "confidence": "待核"}
+    {
+      "title": "黄裳自选集",
+      "type": "作者自选集",
+      "note": "分辑收早期西南/美国兵/书话诸篇（含昆明杂记、茶馆、森林·雨季·山头人、美国兵与女人、琉璃厂、西泠访书记等线索）。",
+      "confidence": "待核"
+    },
+    {
+      "title": "山川、历史、人物",
+      "type": "主题选本",
+      "note": "取向与本项目最接近，须重点对照。",
+      "confidence": "待核"
+    },
+    {
+      "title": "黄裳散文（中国现当代名家散文典藏，人民文学出版社）",
+      "type": "通代散文选",
+      "note": "通行选本，非行旅专题。",
+      "confidence": "待核"
+    },
+    {
+      "title": "黄裳散文选集（百花文艺出版社，2004）",
+      "type": "通代散文选",
+      "note": "百花'散文选集'系列。",
+      "confidence": "待核"
+    }
   ],
   "essays": [
     {
@@ -149,13 +194,19 @@
       "place": "南京（白门）",
       "region": "金陵",
       "scene_type": "城市",
-      "themes": ["故都余韵", "历史兴亡", "城市记忆", "江南文化"],
+      "themes": [
+        "故都余韵",
+        "历史兴亡",
+        "城市记忆",
+        "江南文化"
+      ],
       "summary": "借'白门秋柳'意象写战时南京的衰飒与历史苍凉。原刊《锦帆集》，后又收入《金陵五记》编年首篇，是其金陵书写的起点。属同篇被多书收录之例，须比对异文。",
       "editorial_note": "第三辑'金陵旧梦'定调之作，建议作为该辑开篇。注明初出《锦帆集》、再收《金陵五记》。",
       "proposed_section": 3,
       "source_reference": "《锦帆集》目录 + 《金陵五记》编年（网络检索，互证）。",
       "copyright_status_note": "在版权保护期内；仅作索引与摘要，正文勿大段复制。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-002",
@@ -165,13 +216,18 @@
       "place": "南京",
       "region": "金陵",
       "scene_type": "城市",
-      "themes": ["城市记忆", "战时经验", "掌故"],
+      "themes": [
+        "城市记忆",
+        "战时经验",
+        "掌故"
+      ],
       "summary": "1946年返访南京的随笔，属战后重看旧都的一组文字。具体篇幅与内容待核。",
       "editorial_note": "第三辑；与1946年其他南京诸篇可成'战后初访'小组。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1946）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-003",
@@ -181,13 +237,18 @@
       "place": "南京·鸡鸣寺",
       "region": "金陵",
       "scene_type": "寺观",
-      "themes": ["古迹", "历史兴亡", "掌故"],
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "掌故"
+      ],
       "summary": "写鸡鸣寺一带的登临与怀古；与1979年《重过鸡鸣寺》构成同地重访的对照。内容待核。",
       "editorial_note": "第三辑；与《重过鸡鸣寺》并置，呈现三十年前后同一地点的双重书写。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1946）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-004",
@@ -197,13 +258,18 @@
       "place": "南京",
       "region": "金陵",
       "scene_type": "书肆",
-      "themes": ["书话", "掌故", "历史兴亡"],
+      "themes": [
+        "书话",
+        "掌故",
+        "历史兴亡"
+      ],
       "summary": "记南京'泽存书库'（与陈群相关的藏书旧事），属访书—藏书—史事交织的文字。内容待核。",
       "editorial_note": "双栖第三辑与第七辑；建议入第三辑保地缘完整，于第七辑导读互见。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1946）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-005",
@@ -213,13 +279,18 @@
       "place": "南京",
       "region": "金陵",
       "scene_type": "旧宅",
-      "themes": ["掌故", "人物", "书话"],
+      "themes": [
+        "掌故",
+        "人物",
+        "书话"
+      ],
       "summary": "访南京'盔山精舍'的记游兼记人之作。所涉人物与建置待核。",
       "editorial_note": "第三辑；记访类，可与第八辑'人物途中'互见。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1946）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-006",
@@ -229,13 +300,18 @@
       "place": "南京·老虎桥监狱",
       "region": "金陵",
       "scene_type": "战时现场",
-      "themes": ["人物", "历史兴亡", "战时经验"],
+      "themes": [
+        "人物",
+        "历史兴亡",
+        "战时经验"
+      ],
       "summary": "1946年于南京老虎桥监狱探看在押的周作人（知堂）的纪实，是战后审奸语境下的人物现场记录。细节待核。",
       "editorial_note": "史料与文学张力俱强，'必收'候选；置第三辑，第八辑导读点出人物书写意义。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1946）。",
       "copyright_status_note": "在版权保护期内；引用限短句并注出处。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-007",
@@ -245,13 +321,20 @@
       "place": "南京（多处）",
       "region": "金陵",
       "scene_type": "古迹",
-      "themes": ["古迹", "掌故", "历史兴亡", "人物", "江南文化"],
+      "themes": [
+        "古迹",
+        "掌故",
+        "历史兴亡",
+        "人物",
+        "江南文化"
+      ],
       "summary": "1947年系列短札，下含小序及半山寺与谢公墩、石观音寺、周处读书台、绛云书卷美人图、柳如是、快园、随园、梅园、后湖、小虹桥、咏怀堂诗、梅花山、莫愁湖、明太祖与徐达、桃花扇底看南朝、马湘兰、记者生涯、豁蒙楼上看浓春、燕子矶、白鹭洲等约二十则。",
       "editorial_note": "第三辑骨干。整组收入或精选，注释逐则补史地背景；最能代表'一地一史一人'的写法。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1947，含子目）。",
       "copyright_status_note": "在版权保护期内；仅索引、子目与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-008",
@@ -261,13 +344,18 @@
       "place": "江南／南京",
       "region": "江南",
       "scene_type": "城市",
-      "themes": ["城市记忆", "历史兴亡", "战时经验"],
+      "themes": [
+        "城市记忆",
+        "历史兴亡",
+        "战时经验"
+      ],
       "summary": "1949年政权更替之际重看江南/南京的一组文字，带强烈的时代转折现场感。内容待核。",
       "editorial_note": "时代标尺性文本；第三辑收录，导读点明1949断层意义。可选'必收'。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1949）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-009",
@@ -277,13 +365,18 @@
       "place": "南京",
       "region": "金陵",
       "scene_type": "城市",
-      "themes": ["历史兴亡", "人物", "战时经验"],
+      "themes": [
+        "历史兴亡",
+        "人物",
+        "战时经验"
+      ],
       "summary": "1949年以美国驻华大使司徒雷登离华为切口写南京政局变动的时评式随笔。内容待核。",
       "editorial_note": "时代色彩浓；史料价值高但时评成分重，列'可选'，入第三辑加历史注释。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1949）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-010",
@@ -293,13 +386,18 @@
       "place": "南京（白下）",
       "region": "金陵",
       "scene_type": "城市",
-      "themes": ["城市记忆", "故都余韵", "掌故"],
+      "themes": [
+        "城市记忆",
+        "故都余韵",
+        "掌故"
+      ],
       "summary": "1979年重写南京的书简体文字，距早年金陵书写逾三十年，带追忆与今昔对照。内容待核。",
       "editorial_note": "第三辑；与1940年代诸篇跨时空对读，建议作该辑后段收束。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1979）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-011",
@@ -309,13 +407,19 @@
       "place": "南京·秦淮",
       "region": "金陵",
       "scene_type": "江河",
-      "themes": ["故都余韵", "江南文化", "历史兴亡", "掌故"],
+      "themes": [
+        "故都余韵",
+        "江南文化",
+        "历史兴亡",
+        "掌故"
+      ],
       "summary": "1979年重游秦淮的追梦之作，缀合明清秦淮风月、桃花扇旧事与个人记忆。网络有节选流传，使用须核全文出处。",
       "editorial_note": "金陵书写名篇，'必收'候选，第三辑代表作之一。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1979）；网络流传节选（出处待核）。",
       "copyright_status_note": "在版权保护期内；网络节选不足为据，引用限短句并注原书页。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-012",
@@ -325,13 +429,18 @@
       "place": "南京·鸡鸣寺",
       "region": "金陵",
       "scene_type": "寺观",
-      "themes": ["古迹", "故都余韵", "历史兴亡"],
+      "themes": [
+        "古迹",
+        "故都余韵",
+        "历史兴亡"
+      ],
       "summary": "1979年重访鸡鸣寺，与1946年《鸡鸣寺》形成同地重写的时间纵深。内容待核。",
       "editorial_note": "与E-003并置编排，凸显'同地重访'结构。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1979）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-013",
@@ -341,13 +450,18 @@
       "place": "南京·南唐二陵",
       "region": "金陵",
       "scene_type": "古迹",
-      "themes": ["古迹", "历史兴亡", "掌故"],
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "掌故"
+      ],
       "summary": "1979年访南唐二陵（南唐先主、中主陵）的怀古之作。内容待核。",
       "editorial_note": "双栖第三辑与第六辑；建议入第三辑保金陵完整。",
       "proposed_section": 3,
       "source_reference": "《金陵五记》目录（编年1979）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-014",
@@ -357,13 +471,18 @@
       "place": "宝鸡（陕）—广元（川），蜀道",
       "region": "蜀中",
       "scene_type": "旅馆/旅途",
-      "themes": ["战时经验", "城市记忆", "历史兴亡"],
+      "themes": [
+        "战时经验",
+        "城市记忆",
+        "历史兴亡"
+      ],
       "summary": "记由陕入川、宝鸡至广元一线的蜀道行程，是第一辑'蜀道'主题的标志性篇目。具体内容待核。",
       "editorial_note": "第一辑'蜀道与战时中国'核心篇，直接呼应辑名。'必收'候选。",
       "proposed_section": 1,
       "source_reference": "《锦帆集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-015",
@@ -373,13 +492,19 @@
       "place": "成都",
       "region": "蜀中",
       "scene_type": "城市",
-      "themes": ["城市记忆", "战时经验", "掌故", "江南文化"],
+      "themes": [
+        "城市记忆",
+        "战时经验",
+        "掌故",
+        "江南文化"
+      ],
       "summary": "战时成都的城市散记，记后方都市的市井、风物与文化氛围。内容待核。",
       "editorial_note": "第一辑骨干；与《宝鸡——广元》构成'入蜀—居蜀'的地理链条。",
       "proposed_section": 1,
       "source_reference": "《锦帆集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-016",
@@ -389,13 +514,18 @@
       "place": "徐州",
       "region": "江北",
       "scene_type": "旅途/城市",
-      "themes": ["战时经验", "城市记忆", "历史兴亡"],
+      "themes": [
+        "战时经验",
+        "城市记忆",
+        "历史兴亡"
+      ],
       "summary": "途经徐州的纪行，属战时辗转行旅中的一站。内容与确切时间待核。",
       "editorial_note": "第一辑；旅途串场篇，可与蜀道、成都诸篇共同勾勒战时行程线。",
       "proposed_section": 1,
       "source_reference": "《锦帆集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-017",
@@ -405,13 +535,18 @@
       "place": "长江（舟行，具体江段待核）",
       "region": "江南",
       "scene_type": "江河",
-      "themes": ["城市记忆", "战时经验", "江南文化"],
+      "themes": [
+        "城市记忆",
+        "战时经验",
+        "江南文化"
+      ],
       "summary": "舟行江上的杂记，记水路见闻。确切江段（川江或下江）待核，归辑亦随之调整。",
       "editorial_note": "第一辑或第四辑候选；待核定江段后归辑。江河场景的代表篇。",
       "proposed_section": 1,
       "source_reference": "《锦帆集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-018",
@@ -421,13 +556,18 @@
       "place": "昆明",
       "region": "西南",
       "scene_type": "城市",
-      "themes": ["战时经验", "城市记忆", "掌故"],
+      "themes": [
+        "战时经验",
+        "城市记忆",
+        "掌故"
+      ],
       "summary": "抗战后期作者任美军译员期间在昆明的见闻杂记。原书归属与确切年份待核。",
       "editorial_note": "第一辑骨干；呈现青年黄裳作为战时见证者的一面。",
       "proposed_section": 1,
       "source_reference": "网络检索（《黄裳自选集》第一辑提及；疑出《锦帆集》/《锦帆集外》）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-019",
@@ -437,13 +577,17 @@
       "place": "西南/滇缅印一带（待核）",
       "region": "西南／海外",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "城市记忆"],
+      "themes": [
+        "战时经验",
+        "城市记忆"
+      ],
       "summary": "战时行役中关于森林、雨季与边地人群的记述，地理指向待核（可能涉滇缅印战区）。具民族志色彩。",
       "editorial_note": "第一辑或第二辑候选；待核定地点后归辑。",
       "proposed_section": 1,
       "source_reference": "网络检索（《黄裳自选集》第一辑提及）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-020",
@@ -453,13 +597,17 @@
       "place": "—",
       "region": "—",
       "scene_type": "序跋",
-      "themes": ["战时经验", "自述"],
+      "themes": [
+        "战时经验",
+        "自述"
+      ],
       "summary": "《关于美国兵》全书序言，交代写作缘起与立场。导读价值高。",
       "editorial_note": "第二辑导读可引其短句；正文是否收附录视体例定。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；引用限短句并注出处。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "资料库"
     },
     {
       "id": "E-021",
@@ -469,13 +617,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "城市记忆"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "城市记忆"
+      ],
       "summary": "据篇题，写美军士兵眼中的中国，是中外视角对照的观察。具体内容待核。",
       "editorial_note": "第二辑；'外人看中国'的角度，宜与《种种惊异》并读。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-022",
@@ -485,13 +638,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "人物"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "人物"
+      ],
       "summary": "据篇题，写自诩'中国通'的外国人，含讽刺与观察。内容待核。",
       "editorial_note": "第二辑；人物速写性强，可作辑内调剂。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "资料库"
     },
     {
       "id": "E-023",
@@ -501,13 +659,17 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队"],
+      "themes": [
+        "战时经验",
+        "异国军队"
+      ],
       "summary": "据篇题，写美军中各色人种、职业与人性的混杂景观。内容待核。",
       "editorial_note": "第二辑；群像式观察，呈现战时军营社会切面。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-024",
@@ -517,13 +679,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "人物", "异国军队"],
+      "themes": [
+        "战时经验",
+        "人物",
+        "异国军队"
+      ],
       "summary": "据篇题，记战时接触的几位（美军或相关）人物。内容待核。",
       "editorial_note": "第二辑；与第八辑'人物途中'呼应，可在第八辑导读互见。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-025",
@@ -533,13 +700,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "历史兴亡"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "历史兴亡"
+      ],
       "summary": "据篇题，写中方军官与美军相处的现场政治与人情。内容待核。",
       "editorial_note": "第二辑；中外军队接触的关系层面，史料感强。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-026",
@@ -549,13 +721,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "城市记忆"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "城市记忆"
+      ],
       "summary": "写美军与中国社会接触中关于女性的一面，是战时社会风气的敏感切片。内容待核。",
       "editorial_note": "第二辑核心候选；重点在现场记录而非猎奇。'必收'候选。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索；亦见《黄裳自选集》）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-027",
@@ -565,13 +742,17 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队"],
+      "themes": [
+        "战时经验",
+        "异国军队"
+      ],
       "summary": "据篇题（S.O.S.疑指美军后勤勤务部门 Services of Supply），带反讽地写其运作。内容待核。",
       "editorial_note": "第二辑；注释须考订'S.O.S.'所指的美军建制。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "资料库"
     },
     {
       "id": "E-028",
@@ -581,13 +762,17 @@
       "place": "前线（待核，疑滇西/缅北）",
       "region": "西南／海外",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "历史兴亡"],
+      "themes": [
+        "战时经验",
+        "历史兴亡"
+      ],
       "summary": "据篇题，记前线见闻。具体战区待核（疑滇西或缅北反攻一线）。",
       "editorial_note": "第二辑；若证实涉缅印战区，可与第一辑《森林·雨季·山头人》互见。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-029",
@@ -597,13 +782,17 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队"],
+      "themes": [
+        "战时经验",
+        "异国军队"
+      ],
       "summary": "据篇题，借美军物资（咖啡）写其后勤与作风。内容待核。",
       "editorial_note": "第二辑；物质细节切入战争，角度别致。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "资料库"
     },
     {
       "id": "E-030",
@@ -613,13 +802,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "城市记忆"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "城市记忆"
+      ],
       "summary": "据篇题，记中外接触中的种种文化惊异。内容待核。",
       "editorial_note": "第二辑；文化错位的观察，宜与《他们怎样看中国》对读。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-031",
@@ -629,13 +823,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "书话"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "书话"
+      ],
       "summary": "据篇题，写美军中的读物、娱乐等文化生活（综述提及其'精神食粮丰盛'）。内容待核。",
       "editorial_note": "第二辑；'军中文化'与黄裳书话兴趣相通，可在第七辑导读互见。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "资料库"
     },
     {
       "id": "E-032",
@@ -645,13 +844,17 @@
       "place": "西南后方（待核，疑滇缅公路沿线）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队"],
+      "themes": [
+        "战时经验",
+        "异国军队"
+      ],
       "summary": "据篇题，写运输部队（汽车团）的战时生态。具体地点待核（疑滇缅公路）。",
       "editorial_note": "第二辑；运输线是战时后方命脉，史料价值可观。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "资料库"
     },
     {
       "id": "E-033",
@@ -661,13 +864,18 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "城市记忆", "历史兴亡"],
+      "themes": [
+        "战时经验",
+        "城市记忆",
+        "历史兴亡"
+      ],
       "summary": "据篇题，写依附美军经济为生的中国底层人群，含社会批判。内容待核。",
       "editorial_note": "第二辑；社会观察深度强，'必收'候选。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-034",
@@ -677,13 +885,19 @@
       "place": "西南后方（待核）",
       "region": "西南",
       "scene_type": "战时现场",
-      "themes": ["战时经验", "异国军队", "自述", "人物"],
+      "themes": [
+        "战时经验",
+        "异国军队",
+        "自述",
+        "人物"
+      ],
       "summary": "据篇题并结合作者本人即任美军译员的经历，写'翻译官'这一战时特殊角色。具自述色彩。内容待核。",
       "editorial_note": "第二辑收束篇候选；作者夫子自道，最贴近其战时身份。'必收'候选。",
       "proposed_section": 2,
       "source_reference": "《关于美国兵》目录（网络检索）；与作者译员经历互证。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-035",
@@ -693,13 +907,19 @@
       "place": "采石矶、当涂、青山（皖南／长江沿线）",
       "region": "江南",
       "scene_type": "古迹",
-      "themes": ["古迹", "历史兴亡", "人物", "江南文化"],
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "人物",
+        "江南文化"
+      ],
       "summary": "沿长江访采石矶、当涂、青山（李白墓所在）一线的怀古纪游，山水与人物（李白）史迹交织。原书归属与年份待核。",
       "editorial_note": "第四辑'江南行旅'候选；典型'山水—史迹—人物'三合一写法。",
       "proposed_section": 4,
       "source_reference": "网络检索（《黄裳自选集》/综述提及）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-036",
@@ -709,13 +929,18 @@
       "place": "西南（成渝一带，待核）",
       "region": "蜀中／西南",
       "scene_type": "城市",
-      "themes": ["城市记忆", "战时经验", "掌故"],
+      "themes": [
+        "城市记忆",
+        "战时经验",
+        "掌故"
+      ],
       "summary": "写西南后方茶馆生态的世情速写，地点（成都或重庆）待核。",
       "editorial_note": "第一辑候选；茶馆是战时后方社会的横切面，有风俗志价值。",
       "proposed_section": 1,
       "source_reference": "网络检索（《黄裳自选集》第一辑提及）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-037",
@@ -725,13 +950,19 @@
       "place": "杭州·西泠（西湖孤山一带）",
       "region": "江南",
       "scene_type": "书肆",
-      "themes": ["书话", "城市记忆", "江南文化", "掌故"],
+      "themes": [
+        "书话",
+        "城市记忆",
+        "江南文化",
+        "掌故"
+      ],
       "summary": "记在杭州西泠一带访书的经历，是'访书即旅行'的典型文本，书事与湖山地理交织。内容待核。",
       "editorial_note": "第七辑'书肆、旧书与纸上行旅'核心篇；最能体现'读书即旅行'。'必收'候选。可与第四辑江南互见。",
       "proposed_section": 7,
       "source_reference": "《榆下说书》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-038",
@@ -741,13 +972,19 @@
       "place": "北京·琉璃厂",
       "region": "北平",
       "scene_type": "书肆",
-      "themes": ["书话", "故都余韵", "城市记忆", "掌故"],
+      "themes": [
+        "书话",
+        "故都余韵",
+        "城市记忆",
+        "掌故"
+      ],
       "summary": "写北京琉璃厂书肆古玩街的访书见闻与文化记忆，是打通'行旅'与'书旅'的关键篇。原书归属待核。",
       "editorial_note": "第五辑'北平与旧都余韵'核心篇；'必收'候选。与第七辑互见。",
       "proposed_section": 5,
       "source_reference": "网络检索（《黄裳自选集》第四辑收《琉璃厂》）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-039",
@@ -757,13 +994,17 @@
       "place": "海滨（具体地待核，疑青岛/北戴河一带）",
       "region": "待核",
       "scene_type": "旅馆/城市",
-      "themes": ["城市记忆", "江南文化"],
+      "themes": [
+        "城市记忆",
+        "江南文化"
+      ],
       "summary": "海滨避暑的行旅记，属较少见的休闲行旅题材。地点与年份待核。",
       "editorial_note": "第四辑或第六辑候选；待核定地点后归辑，可丰富'行旅'题材的多样性。",
       "proposed_section": 4,
       "source_reference": "《银鱼集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
     },
     {
       "id": "E-040",
@@ -773,13 +1014,20 @@
       "place": "南京（秦淮）",
       "region": "金陵",
       "scene_type": "古迹",
-      "themes": ["人物", "掌故", "历史兴亡", "书话", "江南文化"],
+      "themes": [
+        "人物",
+        "掌故",
+        "历史兴亡",
+        "书话",
+        "江南文化"
+      ],
       "summary": "写明末清初文人余怀（淡心，《板桥杂记》作者）与南京秦淮的因缘，是借人物钩沉金陵文史的文字。内容待核。",
       "editorial_note": "双栖第八辑（人物）与第三辑（金陵）；建议入第八辑，第三辑导读互见。体现'以人写地'。",
       "proposed_section": 8,
       "source_reference": "《银鱼集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "必收"
     },
     {
       "id": "E-041",
@@ -789,19 +1037,58 @@
       "place": "—（涉绍兴/杭州等张岱行迹）",
       "region": "江南",
       "scene_type": "—（论人）",
-      "themes": ["人物", "书话", "历史兴亡", "江南文化"],
+      "themes": [
+        "人物",
+        "书话",
+        "历史兴亡",
+        "江南文化"
+      ],
       "summary": "评晚明散文家张岱（宗子），兼及其山水小品与故国之思，与黄裳自身的趣味遥相呼应。属论人之作，行旅成分弱。",
       "editorial_note": "第八辑候选，但属文学评论而非行旅；列'可选'，若取则须与游记篇搭配，避免冲淡全书行旅主线。",
       "proposed_section": 8,
       "source_reference": "《银鱼集》目录（网络检索）。",
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
-      "confidence": "待核"
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-043",
+      "title": "杭州杂记",
+      "original_collection": "花步集（待核）",
+      "approximate_year": "待核",
+      "place": "杭州",
+      "region": "江南",
+      "scene_type": "城市",
+      "themes": [
+        "城市记忆",
+        "江南文化",
+        "掌故"
+      ],
+      "summary": "写杭州（西湖一带）的城市游记。出现于网络检索的黄裳作品列表，归入《花步集》系推测；篇名、原书与年份均待核。",
+      "editorial_note": "第四辑'江南行旅'候选，可补杭州一站。须以原书坐实是否确有此篇及归属。",
+      "proposed_section": 4,
+      "source_reference": "网络检索的作品列表（非逐字目录，可靠性较低）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "推测",
+      "inclusion": "可选"
     }
   ],
   "not_recommended": [
-    {"title_or_type": "纯书话（无行踪）：谈\"善本\"、谈\"题跋\"、谈\"集部\"、谈禁书、古书的作伪 等（《榆下说书》）", "reason": "属版本学/书话专论，无地点或行旅线索，与'行旅文史'主旨偏离；留待黄裳书话专集，不入本选本。", "confidence": "待核"},
-    {"title_or_type": "纯文学评论：关于张宗子 / 关于吴梅村 / 关于余淡心 等单纯论人论文之作", "reason": "论人论文成分重、行旅成分弱；除非与具体地点（如余淡心与金陵）绑定，否则列'不宜收'或'可选'，避免冲淡行旅主线。", "confidence": "待核"},
-    {"title_or_type": "纯时政评论篇（如部分1949年时评）", "reason": "时评性强、时效性内容多，须经史地注释方能入；超出'地点触发的文史随笔'范畴者不收。", "confidence": "待核"}
+    {
+      "title_or_type": "纯书话（无行踪）：谈\"善本\"、谈\"题跋\"、谈\"集部\"、谈禁书、古书的作伪 等（《榆下说书》）",
+      "reason": "属版本学/书话专论，无地点或行旅线索，与'行旅文史'主旨偏离；留待黄裳书话专集，不入本选本。",
+      "confidence": "待核"
+    },
+    {
+      "title_or_type": "纯文学评论：关于张宗子 / 关于吴梅村 / 关于余淡心 等单纯论人论文之作",
+      "reason": "论人论文成分重、行旅成分弱；除非与具体地点（如余淡心与金陵）绑定，否则列'不宜收'或'可选'，避免冲淡行旅主线。",
+      "confidence": "待核"
+    },
+    {
+      "title_or_type": "纯时政评论篇（如部分1949年时评）",
+      "reason": "时评性强、时效性内容多，须经史地注释方能入；超出'地点触发的文史随笔'范畴者不收。",
+      "confidence": "待核"
+    }
   ],
   "needs_verification": [
     "《锦帆集》是否属'中华文艺丛刊'、《锦帆集外》是否确为'文学丛刊第九集'——丛书归属待图书馆书目核。",
@@ -818,6 +1105,7 @@
     "第六辑（古迹/废墟，跨地域）除金陵诸篇外，独立篇目尚少。",
     "戏曲题材（剧场/戏曲人物）篇目几乎空白，须查《旧戏新谈》等。",
     "多部原始结集的出版社/年份仍为网络二手，须以图书馆书目/实物核定。",
-    "尚未系统排查'同篇异文'（如白门秋柳的锦帆集本 vs 金陵五记本）。"
+    "尚未系统排查'同篇异文'（如白门秋柳的锦帆集本 vs 金陵五记本）。",
+    "补第四—八辑需逐篇目录，而《花步集》《晚春的行旅》《翠墨集》等的目录页在豆瓣/微信读书/中图网/百度等站被出口代理按组织策略拦截（HTTP 403，不可重试），WebSearch 亦无法还原逐字目录；下一步须改走图书馆 OPAC（国图/上图/南图）或原书/《黄裳集》分卷录目。"
   ]
 }

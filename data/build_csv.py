@@ -30,6 +30,7 @@ COLUMNS = [
     "source_reference",
     "copyright_status_note",
     "confidence",
+    "inclusion",
 ]
 
 
