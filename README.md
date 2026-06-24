@@ -36,12 +36,17 @@ huangshang-travel-anthology/
 │   ├── validate.py                  # 数据校验脚本（id唯一、受控词表、字段完整性）
 │   ├── build_timeline.py            # 由 JSON 生成行旅年表 Markdown（输出至 notes/）
 │   ├── build_pdf.py                 # 由 JSON + 各 .md 生成 XeLaTeX PDF（编选方案成稿）
+│   ├── build_critique_pdf.py        # 由 criticism/ 评论生成可发表 XeLaTeX PDF（文艺评论成稿）
 │   └── build_book.py                # 由 JSON + texts/ 录入正文 生成全本 PDF（个人阅读版）
+├── criticism/                       # 原创文艺评论（作者 ajzhanghk），可独立发表
+│   └── huangshang_wenshi_youji_lun.md # 《易代之眼：论黄裳文史游记…》评论正文＋征引附录
 ├── texts/                           # 【个人】自藏原书录入区；*.txt 已 gitignore，绝不入库
 │   └── README.md                    # 录入约定与全本生成说明
 ├── build/
 │   ├── huangshang_anthology_plan.pdf # 编选方案 PDF（封面+目录+八辑+篇目摘要+年表+资料）
-│   └── huangshang_anthology_plan.tex # 由 build_pdf.py 生成的 LaTeX 源（aux 文件已 gitignore）
+│   ├── huangshang_anthology_plan.tex # 由 build_pdf.py 生成的 LaTeX 源（aux 文件已 gitignore）
+│   ├── huangshang_wenshi_youji_lun.pdf # 文艺评论 PDF（由 build_critique_pdf.py 生成）
+│   └── huangshang_wenshi_youji_lun.tex # 文艺评论 LaTeX 源（aux 文件已 gitignore）
 ├── notes/
 │   ├── source_bibliography.md       # 资料来源与版本目录
 │   ├── editorial_principles.md      # 选编原则
@@ -104,6 +109,15 @@ huangshang-travel-anthology/
 > 4. 新增《印度小夜曲》（E-060）与《音尘集》（C-yinchen）条目。
 > 5. 旧版把《白门秋柳》当作1942年原始结集；经核，豆瓣所见《白门秋柳》是**后出主题选本**，单篇《白门秋柳》初出《锦帆集》第3章，confidence升为确定。详见 `notes/source_bibliography.md`。
 
-## 八、引用与署名
+## 八、文艺评论（criticism/）
+
+在篇目数据库与编选框架之上，新增一篇**原创文艺评论**《易代之眼：论黄裳文史游记的历史品味、文章趣味与风土人情》（作者 **ajzhanghk**，见 `criticism/huangshang_wenshi_youji_lun.md`），可作全书导论，亦可独立投稿发表。
+
+- **核心论点**：黄裳痴迷的历史高度集中于**明清易代**，而他笔力最盛的金陵诸篇恰成于 1946–1949 另一个"易代之际"——**他读十七世纪，是为了照见自己亲历的二十世纪**。全文以这条"以古照今"的主轴，把历史品味、文章趣味、风土人情统摄为一个有内在动力的整体。
+- **结构**：引子→历史的眼光（明清之际与道德审判）→怀古与见证（记者黄裳的"易代"现场）→文章趣味（周作人之闲与鲁迅之硬的调和）→风土人情（茶馆与"美人肝"以小见史）→三事一体（行旅·读史·访书）→时间纵深（同地重访）→结语，并附**征引篇目举要**与**与本项目其他文献的关系**两则附录，把已整理的篇目信息完整保留其中。
+- **成稿**：`python data/build_critique_pdf.py` → `build/huangshang_wenshi_youji_lun.pdf`（10 页，复用 `build_pdf.py` 的字体与 Markdown→LaTeX 引擎，0 缺字）。
+- **版权诚信**：评论为原创，引述以公有领域古人成句与篇名为主，凡涉黄裳本人文字只取短句；史实凡未据原书坐实者以"据其文／疑／约"提示，严格标注以数据库为准。
+
+## 九、引用与署名
 
 研究性整理项目，仅作学术与出版策划用途。正式出版前须取得版权方授权，并以原书核校全部篇目、年份与文字。
