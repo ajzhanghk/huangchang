@@ -1,6 +1,7 @@
 {
   "schema_version": "0.4",
   "last_updated": "2026-06-24",
+  "essay_count_note": "58 essays as of 2026-06-24 (42 original + 16 added: 11 from 金陵五记 1946/1949/1979, 2 from 锦帆集, 3 from 银鱼集)",
   "confidence_legend": {
     "确定": "Confirmed; corroborated by an authoritative source or by two+ independent sources.",
     "待核": "Plausible (often from a single web table-of-contents); must be checked against the original text or a library catalogue.",
@@ -1071,6 +1072,344 @@
       "copyright_status_note": "在版权保护期内；仅索引与摘要。",
       "confidence": "推测",
       "inclusion": "可选"
+    },
+    {
+      "id": "E-044",
+      "title": "「美人肝」",
+      "original_collection": "金陵五记",
+      "approximate_year": "1946",
+      "place": "南京",
+      "region": "金陵",
+      "scene_type": "城市",
+      "themes": [
+        "掌故",
+        "城市记忆",
+        "江南文化"
+      ],
+      "summary": "据篇名及《金陵五记》1946年组诸篇整体风格，推测写南京某一饮食风俗或文化掌故；具体内容待核。篇名「美人肝」疑为金陵旧时菜名或文史典故。",
+      "editorial_note": "第三辑补充；1946年六篇中唯一尚未录入者，完整《金陵五记》须含此篇方不缺目。内容与取舍待核原文后定。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1946；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "推测",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-045",
+      "title": "社会科学者眼里的南京",
+      "original_collection": "金陵五记",
+      "approximate_year": "1949",
+      "place": "南京",
+      "region": "金陵",
+      "scene_type": "城市",
+      "themes": [
+        "历史兴亡",
+        "城市记忆",
+        "战时经验"
+      ],
+      "summary": "1949年以社会观察者视角审视南京政治、经济与社会变动。内容待核。与同年《解放后看江南》《司徒雷登夹着皮包走了以后》同属1949年南京见证书写。",
+      "editorial_note": "第三辑；与E-008、E-009并列，合构1949年南京历史现场书写。时评成分可能较重，取舍视原文决定，暂列'可选'。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1949；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-046",
+      "title": "不再做花瓶——记中国农业机械公司南京工厂",
+      "original_collection": "金陵五记",
+      "approximate_year": "1949",
+      "place": "南京",
+      "region": "金陵",
+      "scene_type": "城市",
+      "themes": [
+        "战时经验",
+        "城市记忆",
+        "历史兴亡"
+      ],
+      "summary": "1949年记南京某工厂（中国农业机械公司）的纪实文字，属解放初期社会面貌观察。内容与文学质量待核。",
+      "editorial_note": "第三辑候选，但属工厂纪实/报告文学，文学行旅成分弱于同期其他篇目；暂列'可选'，核原文后决定是否降为资料库。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1949；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-047",
+      "title": "白鹭洲公园补记",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京·白鹭洲",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "江南文化"
+      ],
+      "summary": "1979年对白鹭洲公园的补记。白鹭洲为南京历史园林，有秦淮文化脉络；此篇与《金陵杂记》1947年白鹭洲条构成同地重访对照。内容待核。",
+      "editorial_note": "第三辑；E-007《金陵杂记》已含1947年白鹭洲子目，此1979年补记可与之并读，形成'同地重访'。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-048",
+      "title": "天王府的西花园",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京·天王府（太平天国旧址）",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "掌故"
+      ],
+      "summary": "1979年访太平天国天王府遗址之西花园（今南京总统府区域），写近代史迹与兴亡之感。天王府是晚清重大历史事件的现场。内容待核。",
+      "editorial_note": "第三辑（近代金陵史迹），亦可入第六辑（古迹）；保地缘完整入第三辑，第六辑导读互见。天王府为南京近代史重要地标，'必收'候选。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "必收"
+    },
+    {
+      "id": "E-049",
+      "title": "梅园（1979版）",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京·梅园",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "城市记忆"
+      ],
+      "summary": "1979年专题写梅园（疑为梅园新村——1946年国共谈判中共代表驻地，或另一历史园林），与《金陵杂记》1947年梅园条互见，形成时间纵深。内容待核。",
+      "editorial_note": "第三辑；须与E-007《金陵杂记》梅园子目区分，确认此为独立成篇。若写梅园新村，则1946年谈判史迹与1979年追忆的对比尤具历史意义。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979）。注：1947年金陵杂记含梅园子目，此为独立1979版，须核定是否同地且独立成篇。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-050",
+      "title": "王介甫与金陵",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京（半山园等王安石相关遗迹）",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "掌故",
+        "历史兴亡",
+        "人物"
+      ],
+      "summary": "以宋代政治家王安石（字介甫）晚年退居金陵为线索，写南京与历史人物的交织。王安石逝于金陵，有半山园等遗迹，与其变法结局形成历史回响。内容待核。",
+      "editorial_note": "第三辑；'一地一人'写法的典范，与《金陵杂记》中柳如是、马湘兰等诸人文并列，展示金陵历史人物书写的纵深。亦可入第八辑互见。'必收'候选。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "必收"
+    },
+    {
+      "id": "E-051",
+      "title": "莫愁湖（1979版）",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京·莫愁湖",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "掌故",
+        "江南文化"
+      ],
+      "summary": "1979年专题写莫愁湖，与《金陵杂记》1947年莫愁湖条互见，展现同地三十年前后的对照书写。莫愁湖有'胜棋楼''莫愁女'等历史典故。内容待核。",
+      "editorial_note": "第三辑；须与E-007《金陵杂记》莫愁湖子目区分，确认独立成篇。同地重访结构（1947↔1979）是全书核心编辑手法之一。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979）。注：1947年金陵杂记含莫愁湖子目，此为独立1979版，须核定。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-052",
+      "title": "石巢园",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京·石巢园",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "掌故"
+      ],
+      "summary": "1979年访南京石巢园（明末清初文人相关的园林遗址）的怀古文字。所指人物与具体史迹待核。",
+      "editorial_note": "第三辑；金陵园林古迹系列，与石观音寺、梅园、莫愁湖诸篇同属1979年南京访古。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-053",
+      "title": "扫叶楼",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京·扫叶楼（清凉山）",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡",
+        "掌故",
+        "人物"
+      ],
+      "summary": "1979年访清凉山扫叶楼的怀古之作。扫叶楼为清初画家龚贤旧居兼画室，后成南京历史名胜，是书画史与金陵地理交织的典型地点。内容待核。",
+      "editorial_note": "第三辑；龚贤题材，可与第八辑人物互见（龚贤作为核心人物）。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-054",
+      "title": "献花岩",
+      "original_collection": "金陵五记",
+      "approximate_year": "1979",
+      "place": "南京郊外·献花岩（具体地点待核）",
+      "region": "金陵",
+      "scene_type": "古迹",
+      "themes": [
+        "古迹",
+        "历史兴亡"
+      ],
+      "summary": "1979年访献花岩（南京近郊某山川古迹）。具体位置与内容待核，可能涉山川探胜与历史追想。",
+      "editorial_note": "第三辑或第六辑候选；若内容偏山川古迹而非南京城区，可移入第六辑。待核定地点后再决归辑。",
+      "proposed_section": 3,
+      "source_reference": "《金陵五记》目录（编年1979；notes/source_bibliography.md 第五节A）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-055",
+      "title": "断片",
+      "original_collection": "锦帆集",
+      "approximate_year": "约1944—1946",
+      "place": "西南后方（待核）",
+      "region": "蜀中／西南",
+      "scene_type": "战时现场",
+      "themes": [
+        "战时经验",
+        "城市记忆"
+      ],
+      "summary": "《锦帆集》首篇，题名'断片'，疑为战时西南行旅中的若干速写或感受断想。作为全书开篇，有定调意义。具体内容待核。",
+      "editorial_note": "第一辑；作为《锦帆集》首篇宜与宝鸡—广元、成都散记等蜀道诸篇合读；内容性质（文学散笔或世情速写）核原文后定取舍。",
+      "proposed_section": 1,
+      "source_reference": "《锦帆集》目录首条（notes/source_bibliography.md 第五节C）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-056",
+      "title": "音尘",
+      "original_collection": "锦帆集",
+      "approximate_year": "约1944—1946",
+      "place": "西南后方（待核）",
+      "region": "蜀中／西南",
+      "scene_type": "战时现场",
+      "themes": [
+        "战时经验",
+        "城市记忆"
+      ],
+      "summary": "《锦帆集》篇目之一，题名'音尘'（音讯，兼含离别之意）。据篇名推测可能是战时音讯阻隔或离别主题的散文；内容待核。",
+      "editorial_note": "第一辑候选；需核原文方可定归辑与取舍。",
+      "proposed_section": 1,
+      "source_reference": "《锦帆集》目录（notes/source_bibliography.md 第五节C）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "推测",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-057",
+      "title": "关于余淡心",
+      "original_collection": "银鱼集（后并入《黄裳集·创作卷Ⅴ》）",
+      "approximate_year": "待核",
+      "place": "—（涉南京秦淮等余怀相关地点）",
+      "region": "金陵",
+      "scene_type": "—（论人）",
+      "themes": [
+        "人物",
+        "书话",
+        "掌故",
+        "江南文化"
+      ],
+      "summary": "关于明末清初文人余怀（字淡心，著《板桥杂记》）的评论性记人文字，与E-040《余淡心与金陵》互见。前者以金陵地点为主，此篇侧重人物评述。内容待核。",
+      "editorial_note": "第八辑；与E-040互见：建议两篇不重复收录——取地缘感强的E-040入第三辑或此篇入第八辑，二择其一详收，另一略提。",
+      "proposed_section": 8,
+      "source_reference": "《银鱼集》目录（notes/source_bibliography.md 第五节D）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-058",
+      "title": "关于吴梅村",
+      "original_collection": "银鱼集（后并入《黄裳集·创作卷Ⅴ》）",
+      "approximate_year": "待核",
+      "place": "—（涉江南，吴伟业相关行迹）",
+      "region": "江南",
+      "scene_type": "—（论人）",
+      "themes": [
+        "人物",
+        "书话",
+        "历史兴亡",
+        "江南文化"
+      ],
+      "summary": "关于清初诗人吴伟业（字骏公，号梅村）的记人文字，涉明清易代之际贰臣心理与诗文成就。黄裳对明清之际文人的关注在此得到体现。内容待核。",
+      "editorial_note": "第八辑；吴梅村的晚明遗民情怀与黄裳对历史兴亡的关注高度契合。若含江南行踪，亦可入第四辑互见。",
+      "proposed_section": 8,
+      "source_reference": "《银鱼集》目录（notes/source_bibliography.md 第五节D）。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
+    },
+    {
+      "id": "E-059",
+      "title": "咏怀堂",
+      "original_collection": "银鱼集（后并入《黄裳集·创作卷Ⅴ》）",
+      "approximate_year": "待核",
+      "place": "—（涉江苏如皋或南京等冒辟疆相关地点，待核）",
+      "region": "江南",
+      "scene_type": "旧宅",
+      "themes": [
+        "人物",
+        "掌故",
+        "历史兴亡",
+        "江南文化"
+      ],
+      "summary": "写明末清初名士冒辟疆斋号'咏怀堂'及其文化意涵，可能涉其与董小宛的传奇与江南文人群落。内容待核。注意与E-007《金陵杂记》子目'咏怀堂诗'区分——彼为1947年南京所见某堂诗集，此为银鱼集独立篇。",
+      "editorial_note": "第八辑；冒辟疆与董小宛的江南题材，若有如皋等实地行踪，亦可入第四辑江南互见。须核原文以区分两篇'咏怀堂'。",
+      "proposed_section": 8,
+      "source_reference": "《银鱼集》目录（notes/source_bibliography.md 第五节D）。注意与《金陵杂记》子目'咏怀堂诗'（1947年）区分。",
+      "copyright_status_note": "在版权保护期内；仅索引与摘要。",
+      "confidence": "待核",
+      "inclusion": "可选"
     }
   ],
   "not_recommended": [
@@ -1100,12 +1439,15 @@
     "《关于美国兵》15篇目录的个别字词（如'S.O.S.'所指建制）须以原书校。"
   ],
   "gaps": [
-    "《锦帆集外》《花步集》《晚春的行旅》《翠墨集》《榆下杂说》完整篇目尚未录入。",
-    "第五辑（北平/琉璃厂/旧城/剧场）目前仅《琉璃厂》一篇已核线索，须从书话诸集与《珠还记幸》《来燕榭文存》补采。",
-    "第六辑（古迹/废墟，跨地域）除金陵诸篇外，独立篇目尚少。",
-    "戏曲题材（剧场/戏曲人物）篇目几乎空白，须查《旧戏新谈》等。",
+    "第三辑（金陵）：《金陵五记》五个时间层已基本录入（58篇中24篇属第三辑）；梅园(1979)与莫愁湖(1979)须核定是否与金陵杂记子目重合；「美人肝」内容完全待核。",
+    "《锦帆集外》完整篇目尚未录入（含锦帆集之外的战时西南篇）。",
+    "第四辑（江南）：仍仅3篇，《花步集》《晚春的行旅》逐篇目录获取受阻（豆瓣/中图网 403），须改走图书馆 OPAC（国图/上图）或《黄裳集·创作卷Ⅳ》原书。",
+    "第五辑（北平/琉璃厂/旧城/剧场）仅《琉璃厂》1篇，须从《翠墨集》《珠还记幸》《来燕榭文存》补采旧城/剧场/访书诸篇。",
+    "第六辑（古迹/废墟，跨地域）独立篇目为零；天王府等怀古篇因金陵地缘划入第三辑；须从《翠墨集》'山川风物'内容（目录待录入）补充跨地域古迹篇。",
+    "戏曲题材（剧场/戏曲人物）篇目几乎空白，须查《旧戏新谈》中含地点/人物的篇目，选入第五辑或第八辑。",
+    "第七辑（书旅）仅《西泠访书记》1篇；须从《翠墨集》《榆下杂说》《珠还记幸》中摘选带行踪的访书文。",
+    "第八辑（人物）现5篇；《珠还记幸》《来燕榭文存》中记人文字尚未录入。",
     "多部原始结集的出版社/年份仍为网络二手，须以图书馆书目/实物核定。",
-    "尚未系统排查'同篇异文'（如白门秋柳的锦帆集本 vs 金陵五记本）。",
-    "补第四—八辑需逐篇目录，而《花步集》《晚春的行旅》《翠墨集》等的目录页在豆瓣/微信读书/中图网/百度等站被出口代理按组织策略拦截（HTTP 403，不可重试），WebSearch 亦无法还原逐字目录；下一步须改走图书馆 OPAC（国图/上图/南图）或原书/《黄裳集》分卷录目。"
+    "尚未系统排查'同篇异文'（如白门秋柳的锦帆集本 vs 金陵五记本；梅园/莫愁湖1947 vs 1979版）。"
   ]
 }

@@ -32,10 +32,13 @@ huangshang-travel-anthology/
 ├── data/
 │   ├── huangshang_essays.json       # 结构化篇目表（单一事实来源 / source of truth）
 │   ├── huangshang_essays.csv        # 由 JSON 派生的表格版（供 Excel/校对）
-│   └── build_csv.py                 # 由 JSON 生成 CSV 的脚本（改 JSON 后重跑）
+│   ├── build_csv.py                 # 由 JSON 生成 CSV 的脚本（改 JSON 后重跑）
+│   ├── validate.py                  # 数据校验脚本（id唯一、受控词表、字段完整性）
+│   └── build_timeline.py            # 由 JSON 生成行旅年表 Markdown（输出至 notes/）
 ├── notes/
 │   ├── source_bibliography.md       # 资料来源与版本目录
-│   └── editorial_principles.md      # 选编原则
+│   ├── editorial_principles.md      # 选编原则
+│   └── timeline_draft.md            # 行旅年表（由 build_timeline.py 生成，勿手工修改）
 ├── outline/
 │   ├── new_anthology_outline.md     # 新文集八辑目录方案
 │   ├── volume_preface_draft.md      # 总序草稿
@@ -74,12 +77,13 @@ huangshang-travel-anthology/
 
 ## 七、当前状态速览
 
-- 已录入篇目：**42 条**，八辑均有已核/待核篇目；另收录 9 部书锚记、5 种现有对照选本、3 类「不宜收」判例。
+- 已录入篇目：**58 条**，八辑均有已核/待核篇目；另收录 9 部书锚记、5 种现有对照选本、3 类「不宜收」判例。
 - 每篇带 `inclusion` 分级（必收 / 可选 / 资料库）。第二辑《关于美国兵》15篇已做精选：5必收＋4可选＋6资料库（不整辑照收）。
-- 覆盖较好：第三辑（金陵，据《金陵五记》编年目录）、第二辑（《关于美国兵》完整15篇）、第一辑（《锦帆集》蜀道/西南诸篇）。
-- 仍偏弱：第四辑（江南，3篇）、第五辑（北平，仅《琉璃厂》）、第六辑（古迹，0篇）、戏曲题材。**注：补这几辑需逐篇目录，而《花步集》《晚春的行旅》《翠墨集》的目录页在豆瓣/中图网等站被出口代理按策略拦截（403），须改走图书馆 OPAC 或原书。**
+- 覆盖较好：第三辑（金陵，**24篇**，《金陵五记》全五个时间层基本录完）、第二辑（《关于美国兵》完整15篇）、第一辑（《锦帆集》蜀道/西南诸篇，**9篇**）、第八辑（人物，**5篇**）。
+- 仍偏弱：第四辑（江南，3篇）、第五辑（北平，仅《琉璃厂》）、第六辑（古迹，0篇独立篇，天王府等与第三辑互见）、戏曲题材。**注：补这几辑需逐篇目录，而《花步集》《晚春的行旅》《翠墨集》的目录页在豆瓣/中图网等站被出口代理按策略拦截（403），须改走图书馆 OPAC 或原书。**
 - 数据库另设 `existing_selections`（对照选本）、`not_recommended`（不宜收判例）、`needs_verification`（待核清单）、`gaps`（缺口）四块。
 - 主要缺口见 `data/huangshang_essays.json` 的 `gaps[]`/`needs_verification[]` 与 `notes/source_bibliography.md`。
+- `data/timeline_draft.md`（由 `build_timeline.py` 生成）可供总序附录「黄裳行旅年表」参考。
 
 > **重要更正**：旧版把《白门秋柳》当作1942年原始结集；经核，豆瓣所见《白门秋柳》是**后出主题选本**，单篇《白门秋柳》初出《锦帆集》。详见 `notes/source_bibliography.md`。
 
