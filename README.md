@@ -34,7 +34,11 @@ huangshang-travel-anthology/
 │   ├── huangshang_essays.csv        # 由 JSON 派生的表格版（供 Excel/校对）
 │   ├── build_csv.py                 # 由 JSON 生成 CSV 的脚本（改 JSON 后重跑）
 │   ├── validate.py                  # 数据校验脚本（id唯一、受控词表、字段完整性）
-│   └── build_timeline.py            # 由 JSON 生成行旅年表 Markdown（输出至 notes/）
+│   ├── build_timeline.py            # 由 JSON 生成行旅年表 Markdown（输出至 notes/）
+│   └── build_pdf.py                 # 由 JSON + 各 .md 生成 XeLaTeX PDF（编选方案成稿）
+├── build/
+│   ├── huangshang_anthology_plan.pdf # 编选方案 PDF（封面+目录+八辑+篇目摘要+年表+资料）
+│   └── huangshang_anthology_plan.tex # 由 build_pdf.py 生成的 LaTeX 源（aux 文件已 gitignore）
 ├── notes/
 │   ├── source_bibliography.md       # 资料来源与版本目录
 │   ├── editorial_principles.md      # 选编原则
@@ -71,9 +75,12 @@ huangshang-travel-anthology/
 ## 六、工作方法
 
 1. **JSON 为唯一事实来源**，CSV 由 `build_csv.py` 派生，避免双份手工维护。
-2. 新增/修改篇目 → 编辑 JSON → 运行 `python data/build_csv.py`。
+2. 新增/修改篇目 → 编辑 JSON → 运行 `python data/build_csv.py`；改完跑 `python data/validate.py` 校验。
 3. 任何写入数据库的事实都要带 `confidence` 与 `source_reference`；查不到的标 `待核`，绝不臆造。
 4. 以**《黄裳集》（山东人民出版社）**为主要底本与核对基准，辅以图书馆书目核定原始出版信息。
+5. **生成 PDF 成稿**：`python data/build_pdf.py`（需 XeLaTeX，依赖 `texlive-xetex`/`ctex`/`xeCJK` 与中文字体；脚本用 AR PL 宋/楷 + 文泉驿黑体）。输出 `build/huangshang_anthology_plan.pdf`，含封面、目录、总序、选编原则、八辑目录与导读、**篇目总表（含原创摘要）**、行旅年表、资料来源、待核清单。
+
+> **关于「收录全文」**：黄裳作品版权存续至 2062 年，本项目及生成的 PDF **不收录任何受版权保护的作品全文**，仅含篇目索引、原创内容摘要（≤200字）、版本来源与编辑框架。要点已写入 PDF 封面的「版权与编例说明」。正式出版前须取得版权方授权，并以原书核校全部文字。
 
 ## 七、当前状态速览
 
