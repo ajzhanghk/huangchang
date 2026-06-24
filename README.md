@@ -35,7 +35,10 @@ huangshang-travel-anthology/
 │   ├── build_csv.py                 # 由 JSON 生成 CSV 的脚本（改 JSON 后重跑）
 │   ├── validate.py                  # 数据校验脚本（id唯一、受控词表、字段完整性）
 │   ├── build_timeline.py            # 由 JSON 生成行旅年表 Markdown（输出至 notes/）
-│   └── build_pdf.py                 # 由 JSON + 各 .md 生成 XeLaTeX PDF（编选方案成稿）
+│   ├── build_pdf.py                 # 由 JSON + 各 .md 生成 XeLaTeX PDF（编选方案成稿）
+│   └── build_book.py                # 由 JSON + texts/ 录入正文 生成全本 PDF（个人阅读版）
+├── texts/                           # 【个人】自藏原书录入区；*.txt 已 gitignore，绝不入库
+│   └── README.md                    # 录入约定与全本生成说明
 ├── build/
 │   ├── huangshang_anthology_plan.pdf # 编选方案 PDF（封面+目录+八辑+篇目摘要+年表+资料）
 │   └── huangshang_anthology_plan.tex # 由 build_pdf.py 生成的 LaTeX 源（aux 文件已 gitignore）
@@ -80,7 +83,9 @@ huangshang-travel-anthology/
 4. 以**《黄裳集》（山东人民出版社）**为主要底本与核对基准，辅以图书馆书目核定原始出版信息。
 5. **生成 PDF 成稿**：`python data/build_pdf.py`（需 XeLaTeX，依赖 `texlive-xetex`/`ctex`/`xeCJK` 与中文字体；脚本用 AR PL 宋/楷 + 文泉驿黑体）。输出 `build/huangshang_anthology_plan.pdf`，含封面、目录、总序、选编原则、八辑目录与导读、**篇目总表（含原创摘要）**、行旅年表、资料来源、待核清单。
 
-> **关于「收录全文」**：黄裳作品版权存续至 2062 年，本项目及生成的 PDF **不收录任何受版权保护的作品全文**，仅含篇目索引、原创内容摘要（≤200字）、版本来源与编辑框架。要点已写入 PDF 封面的「版权与编例说明」。正式出版前须取得版权方授权，并以原书核校全部文字。
+> **关于「收录全文」**：黄裳作品版权存续至 2062 年，本仓库及 `build_pdf.py` 生成的「编选方案 PDF」**不收录任何受版权保护的作品全文**，仅含篇目索引、原创内容摘要（≤200字）、版本来源与编辑框架。要点已写入 PDF 封面的「版权与编例说明」。正式出版前须取得版权方授权，并以原书核校全部文字。
+
+6. **全本（个人阅读版）**：`python data/build_book.py` 由 `texts/<编号>.txt` 排印全本 PDF。**正文须由使用者据自藏原书自行录入**，仅供个人学习阅读。仓库不提供、不抓取任何正文；`texts/*.txt` 与全本 PDF 均已 `gitignore`，不会入库或外传。录入约定见 `texts/README.md`。
 
 ## 七、当前状态速览
 

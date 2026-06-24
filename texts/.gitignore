@@ -1,0 +1,4 @@
+# User-digitized essay texts from personally-owned books (in copyright).
+# These are for personal use only and must NEVER be committed/pushed.
+*.txt
+!.gitkeep
