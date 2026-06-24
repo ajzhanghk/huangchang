@@ -74,9 +74,13 @@ huangshang-travel-anthology/
 
 ## 七、当前状态速览
 
-- 已录入篇目：**19 条**（金陵部分较完整，西南/江南部分为待核样本）。
-- 已成文档：README、数据库、来源目录、选编原则、八辑目录、总序草稿、各辑导读、研究工作流。
-- 主要缺口见 `data/huangshang_essays.json` 的 `gaps[]` 与 `notes/source_bibliography.md`。
+- 已录入篇目：**41 条**，八辑均有已核/待核篇目；另收录 9 部书锚记、5 种现有对照选本、3 类「不宜收」判例。
+- 覆盖较好：第三辑（金陵，据《金陵五记》编年目录）、第二辑（《关于美国兵》完整15篇）、第一辑（《锦帆集》蜀道/西南诸篇）。
+- 仍偏弱：第五辑（北平，仅《琉璃厂》）、第六辑（古迹）、戏曲题材（《旧戏新谈》待采）。
+- 数据库另设 `existing_selections`（对照选本）、`not_recommended`（不宜收判例）、`needs_verification`（待核清单）、`gaps`（缺口）四块。
+- 主要缺口见 `data/huangshang_essays.json` 的 `gaps[]`/`needs_verification[]` 与 `notes/source_bibliography.md`。
+
+> **重要更正**：旧版把《白门秋柳》当作1942年原始结集；经核，豆瓣所见《白门秋柳》是**后出主题选本**，单篇《白门秋柳》初出《锦帆集》。详见 `notes/source_bibliography.md`。
 
 ## 八、引用与署名
 
