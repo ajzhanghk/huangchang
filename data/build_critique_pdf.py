@@ -22,14 +22,28 @@ import subprocess
 import sys
 from pathlib import Path
 
-# Reuse the tested Markdown->LaTeX machinery from the plan builder.
+import json
+
+# Reuse the tested Markdown->LaTeX machinery + data-driven section builders
+# from the plan builder, so the critique's appendices stay in lock-step with
+# the single source of truth (data/huangshang_essays.json).
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_pdf import md_to_latex  # noqa: E402
+from build_pdf import (  # noqa: E402
+    md_to_latex, read_md,
+    build_essay_index, build_collections, build_verification,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 MD_FILE = ROOT / "criticism" / "huangshang_wenshi_youji_lun.md"
+DATA_FILE = ROOT / "data" / "huangshang_essays.json"
 BUILD_DIR = ROOT / "build"
 TEX_NAME = "huangshang_wenshi_youji_lun"
+
+# Rare CJK names (李昪/李璟) absent from the Sung body font; xeCJK claims CJK
+# codepoints before newunicodechar can act, so wrap them with \fb (WenQuanYi)
+# in a whole-document post-pass (they appear in both the essay and the data
+# appendix, e.g. the 南唐二陵 summary).
+FALLBACK_GLYPHS = ("昪", "璟")
 
 PREAMBLE = r"""\documentclass[UTF8,fontset=none,zihao=-4,a4paper]{ctexart}
 \usepackage{geometry}
@@ -46,7 +60,7 @@ PREAMBLE = r"""\documentclass[UTF8,fontset=none,zihao=-4,a4paper]{ctexart}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,
-  pdftitle={易代之眼——论黄裳文史游记},pdfauthor={ajzhanghk}}
+  pdftitle={在风景里读历史——论黄裳的文史游记},pdfauthor={ajzhanghk}}
 
 % --- CJK fonts (Linux: AR PL + WenQuanYi) ---
 \setCJKmainfont{AR PL SungtiL GB}
@@ -88,7 +102,7 @@ PREAMBLE = r"""\documentclass[UTF8,fontset=none,zihao=-4,a4paper]{ctexart}
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\sffamily 易代之眼 · 论黄裳文史游记}
+\fancyhead[L]{\small\sffamily 在风景里读历史 · 论黄裳的文史游记}
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 
@@ -100,8 +114,9 @@ TITLE_PAGE = r"""
 \begin{titlepage}
 \centering
 \vspace*{3.2cm}
-{\sffamily\bfseries\fontsize{28}{34}\selectfont 易代之眼}\\[10pt]
-{\kai\Large 论黄裳文史游记的历史品味、文章趣味与风土人情}\\[2.6cm]
+{\sffamily\bfseries\fontsize{28}{34}\selectfont 在风景里读历史}\\[10pt]
+{\kai\Large 论黄裳的文史游记}\\[2.6cm]
+{\large ——历史品味、文章趣味与风土人情}\\[0.6cm]
 {\large 一篇关于黄裳「地点触发的文史随笔」的文艺评论}\\[3cm]
 {\large 作者：ajzhanghk}\\[0.4cm]
 {\normalsize 2026 年 6 月}\\
@@ -124,11 +139,24 @@ def main() -> int:
         print(f"Missing essay: {MD_FILE}", file=sys.stderr)
         return 1
     BUILD_DIR.mkdir(exist_ok=True)
+    data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
 
+    # --- essay body (markdown) ---
     body = md_to_latex(MD_FILE.read_text(encoding="utf-8"), drop_first_h1=True)
-    # Route rare glyphs missing from the Sung body font through WenQuanYi.
-    for ch in ("昪", "璟"):
-        body = body.replace(ch, r"{\fb " + ch + "}")
+
+    # --- data-driven appendices (kept in sync with the JSON source of truth) ---
+    # Re-label the reused builders' top \section as 附录三–六.
+    app3 = build_essay_index(data).replace(
+        r"\section{篇目总表（含原创内容摘要）}",
+        r"\section{附录三　黄裳行旅篇目总表（全五十九篇，含原创摘要）}", 1)
+    app4 = build_collections(data).replace(
+        r"\section{收录书目（书锚）与版本}",
+        r"\section{附录四　收录书目（书锚）与版本}", 1)
+    app5 = (r"\section{附录五　黄裳行旅年表}" + "\n"
+            + read_md("notes/timeline_draft.md", drop_first_h1=True))
+    app6 = build_verification(data).replace(
+        r"\section{待核清单与已知缺口}",
+        r"\section{附录六　待核清单与已知缺口}", 1)
 
     parts = [
         PREAMBLE,
@@ -136,10 +164,16 @@ def main() -> int:
         r"\tableofcontents",
         r"\clearpage",
         body,
+        r"\clearpage",
+        app3, app4, app5, app6,
         r"\end{document}",
         "",
     ]
     tex = "\n\n".join(parts)
+    # Route rare glyphs missing from the Sung body font through WenQuanYi.
+    # Applied to the whole document so essay + data appendices are both covered.
+    for ch in FALLBACK_GLYPHS:
+        tex = tex.replace(ch, r"{\fb " + ch + "}")
     tex_path = BUILD_DIR / f"{TEX_NAME}.tex"
     tex_path.write_text(tex, encoding="utf-8")
     print(f"Wrote {tex_path}")

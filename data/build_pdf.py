@@ -345,6 +345,9 @@ PREAMBLE = r"""\documentclass[UTF8,fontset=none,zihao=-4,a4paper]{ctexart}
 \setCJKmonofont{WenQuanYi Zen Hei Mono}
 \setCJKfamilyfont{zhkai}{AR PL KaitiM GB}
 \newcommand{\kai}{\CJKfamily{zhkai}}
+% fallback family for rare CJK glyphs absent from the Sung body font
+\setCJKfamilyfont{zhfb}{WenQuanYi Zen Hei}
+\newcommand{\fb}{\CJKfamily{zhfb}}
 \setmonofont{DejaVu Sans Mono}[Scale=0.9]
 
 % --- route symbols missing from the Latin font through WenQuanYi ---
@@ -427,6 +430,10 @@ def main() -> int:
              r"\end{document}", ""]
 
     tex = "\n\n".join(parts)
+    # Route rare CJK glyphs missing from the Sung body font (e.g. 李昪/李璟 in
+    # the 南唐二陵 summary) through the WenQuanYi fallback family.
+    for ch in ("昪", "璟"):
+        tex = tex.replace(ch, r"{\fb " + ch + "}")
     tex_path = BUILD_DIR / f"{TEX_NAME}.tex"
     tex_path.write_text(tex, encoding="utf-8")
     print(f"Wrote {tex_path}")
