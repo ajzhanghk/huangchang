@@ -43,7 +43,7 @@ TEX_NAME = "huangshang_wenshi_youji_lun"
 # codepoints before newunicodechar can act, so wrap them with \fb (WenQuanYi)
 # in a whole-document post-pass (they appear in both the essay and the data
 # appendix, e.g. the 南唐二陵 summary).
-FALLBACK_GLYPHS = ("昪", "璟")
+FALLBACK_GLYPHS = ("昪", "璟", "昇")
 
 PREAMBLE = r"""\documentclass[UTF8,fontset=none,zihao=-4,a4paper]{ctexart}
 \usepackage{geometry}

@@ -79,19 +79,28 @@ def esc(s: str) -> str:
     return "".join(out)
 
 
-_INLINE = re.compile(r"`([^`]*)`|\*\*([^*]+?)\*\*")
+_INLINE = re.compile(
+    r"\^\[([^\]]*)\]"         # group(1): ^[inline footnote]
+    r"|`([^`]*)`"              # group(2): `code`
+    r"|\*\*([^*]+?)\*\*"       # group(3): **bold**
+    r"|\*([^*\n]+?)\*"         # group(4): *italic*
+)
 
 
 def inline(s: str) -> str:
-    """Convert inline `code` and **bold**, escaping everything else."""
+    """Convert `code`, **bold**, *italic*, ^[footnote], escaping everything else."""
     out, pos = [], 0
     for m in _INLINE.finditer(s):
         if m.start() > pos:
             out.append(esc(s[pos:m.start()]))
         if m.group(1) is not None:
-            out.append(r"\texttt{" + esc(m.group(1)) + "}")
+            out.append(r"\footnote{" + esc(m.group(1)) + "}")
+        elif m.group(2) is not None:
+            out.append(r"\texttt{" + esc(m.group(2)) + "}")
+        elif m.group(3) is not None:
+            out.append(r"\textbf{" + esc(m.group(3)) + "}")
         else:
-            out.append(r"\textbf{" + esc(m.group(2)) + "}")
+            out.append(r"\textit{" + esc(m.group(4)) + "}")
         pos = m.end()
     if pos < len(s):
         out.append(esc(s[pos:]))
