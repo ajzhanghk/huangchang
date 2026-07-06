@@ -121,6 +121,7 @@ def _is_table_sep(line: str) -> bool:
 
 
 def _heading_cmd(level: int, text: str) -> str:
+    level = max(1, level)
     cmd = {1: "section", 2: "subsection", 3: "subsubsection"}.get(level, "paragraph")
     return f"\\{cmd}{{{inline(text)}}}\n"
 
@@ -167,7 +168,12 @@ def _render_list(items: list[tuple[int, str, str]]) -> str:
     return "\n".join(out) + "\n"
 
 
-def md_to_latex(md: str, drop_first_h1: bool = False) -> str:
+def md_to_latex(md: str, drop_first_h1: bool = False, heading_shift: int = 0) -> str:
+    """Convert Markdown to LaTeX.
+
+    heading_shift adjusts every heading's level (e.g. -1 promotes ## to
+    \\section), for documents whose body starts at ## because # is the title.
+    """
     lines = md.splitlines()
     out, i, dropped = [], 0, False
     while i < len(lines):
@@ -189,7 +195,7 @@ def md_to_latex(md: str, drop_first_h1: bool = False) -> str:
                 dropped = True
                 i += 1
                 continue
-            out.append(_heading_cmd(level, m.group(2).strip()))
+            out.append(_heading_cmd(level + heading_shift, m.group(2).strip()))
             i += 1
             continue
         # table

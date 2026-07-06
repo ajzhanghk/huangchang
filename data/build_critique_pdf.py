@@ -100,6 +100,10 @@ PREAMBLE = r"""\documentclass[UTF8,fontset=none,zihao=-4,a4paper]{ctexart}
 \titleformat*{\subsection}{\large\sffamily\bfseries}
 \titleformat*{\subsubsection}{\normalsize\sffamily\bfseries}
 
+% The essay's headings already carry their own labels (引子/一、/附录三…),
+% so LaTeX auto-numbering is redundant; disable it for clean ToC + headings.
+\setcounter{secnumdepth}{-1}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\sffamily 在风景里读历史 · 论黄裳的文史游记}
@@ -142,7 +146,11 @@ def main() -> int:
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
 
     # --- essay body (markdown) ---
-    body = md_to_latex(MD_FILE.read_text(encoding="utf-8"), drop_first_h1=True)
+    # The essay's H1 is the title (dropped); its real sections start at ##.
+    # Promote one level so ## -> \section, ### -> \subsection, giving a clean
+    # hierarchy instead of a phantom "section 0" (## had mapped to \subsection).
+    body = md_to_latex(MD_FILE.read_text(encoding="utf-8"),
+                       drop_first_h1=True, heading_shift=-1)
 
     # --- data-driven appendices (kept in sync with the JSON source of truth) ---
     # Re-label the reused builders' top \section as 附录三–六.
