@@ -44,6 +44,10 @@ SECTION_LABELS = {
     8: "人物途中",
 }
 
+# Chinese ordinal for the section heading so the generated 篇目总表 matches
+# the outline (outline/new_anthology_outline.md uses 第一辑…第八辑, not 第1辑).
+CN_NUM = {1: "一", 2: "二", 3: "三", 4: "四", 5: "五", 6: "六", 7: "七", 8: "八"}
+
 INCLUSION_MARK = {"必收": "★必收", "可选": "○可选", "资料库": "·资料库"}
 
 # Glyphs that xeCJK routes to the body font (which lacks them) before
@@ -260,11 +264,19 @@ def build_essay_index(data: dict) -> str:
     for sec in order:
         items = sorted((e for e in essays if e.get("proposed_section") == sec),
                        key=lambda e: e["id"])
-        if not items:
+        # Section 1–8 always appear so the 篇目总表 mirrors the full 8-辑
+        # outline; an empty 辑 is shown as 〔待补〕. The appendix (0) is only
+        # emitted when it actually has entries.
+        if not items and sec == 0:
             continue
         label = SECTION_LABELS.get(sec, f"辑{sec}")
-        head = f"第{sec}辑　{label}" if sec else f"附录　{label}"
-        out.append(f"\\subsection{{{esc(head)}（{len(items)} 篇）}}")
+        head = f"第{CN_NUM[sec]}辑　{label}" if sec else f"附录　{label}"
+        count = f"（{len(items)} 篇）" if items else "（待补，暂无已录入篇目）"
+        out.append(f"\\subsection{{{esc(head)}{count}}}")
+        if not items:
+            out.append(r"\noindent{\small\itshape 本辑篇目尚待逐书录入，"
+                       r"参见目录方案与「已知缺口」。}\par\vspace{5pt}")
+            continue
         for e in items:
             mark = INCLUSION_MARK.get(e.get("inclusion", ""), e.get("inclusion", ""))
             meta = f"［{e['id']}｜{mark}｜{e.get('confidence','')}］"
