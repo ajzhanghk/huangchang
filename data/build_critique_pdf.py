@@ -156,7 +156,7 @@ def main() -> int:
     # Re-label the reused builders' top \section as 附录三–六.
     app3 = build_essay_index(data).replace(
         r"\section{篇目总表（含原创内容摘要）}",
-        r"\section{附录三　黄裳行旅篇目总表（全五十九篇，含原创摘要）}", 1)
+        r"\section{附录三　黄裳行旅篇目总表（全六十六篇，含原创摘要）}", 1)
     app4 = build_collections(data).replace(
         r"\section{收录书目（书锚）与版本}",
         r"\section{附录四　收录书目（书锚）与版本}", 1)

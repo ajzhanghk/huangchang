@@ -24,6 +24,7 @@ VALID_INCLUSION = {"必收", "可选", "资料库"}
 # Canonical region values (slash-separated combos also accepted)
 VALID_REGIONS = {
     "蜀中", "西南", "金陵", "江南", "江北", "北平", "上海", "海外",
+    "关中", "西北",
     "待核", "—",
 }
 

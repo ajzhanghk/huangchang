@@ -38,5 +38,5 @@
 
 ## 进度查询
 
-运行 `data/build_book.py` 时会打印 `Essays with supplied full text: N/59`，
-即已录入篇数 / 总篇数。
+运行 `data/build_book.py` 时会打印 `Essays with supplied full text: N/66`，
+即已录入篇数 / 总篇数（总篇数由脚本按数据库实时计算）。
